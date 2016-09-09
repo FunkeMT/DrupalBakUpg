@@ -105,6 +105,7 @@ fi
 
 
 echo "Upgrade completed!"
+echo ">>> Don't forget to delete this script from server!"
 exit 0
 
 
