@@ -91,14 +91,14 @@ echo "remove drupal txt files ..."
 ### clean up
 # wait for online upgrade
 echo "Please run '$homepage_url/update.php' ..."
-read -p "Press any key to continue... " -n1 -s
+echo "Press any key to continue ..."
+read input
 
 # remove tmp files
 echo
-read -p "Are you sure to clean up? Y/N " -n1 -r
-echo
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
+echo "Are you sure to clean up? Y/N "
+read input
+if echo "$input" | grep -iq "^y" ;then
     echo "clean up ..."
     rm -rf $dir_tmp_backup "$drupal_version.tar.gz"
 fi
