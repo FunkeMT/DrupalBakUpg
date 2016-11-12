@@ -33,7 +33,7 @@ bin_mysqldump="mysqldump"
 bin_tar="tar"
 bin_wget="wget"
 
-now=$(date '+%Y%m%dT%H%M%S')
+now=`date +%Y%m%dT%H%M%S`
 
 dir_backup="$folder_backup/$now"
 dir_homepage="$folder_homepage"
